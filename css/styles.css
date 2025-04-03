@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset de margin e padding */
 * {
   margin: 0;
   padding: 0;
@@ -8,35 +8,43 @@
 /* Body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f9f9f9;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
-/* Container */
-.container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 400px;
+/* Header */
+header {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #1d4ed8;
 }
 
 /* Formulário */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.campo {
+  margin-bottom: 15px;
 }
 
 label {
+  display: block;
   font-weight: bold;
-  text-align: left;
+  margin-bottom: 5px;
 }
 
 input, select, textarea {
@@ -46,16 +54,21 @@ input, select, textarea {
   border-radius: 4px;
 }
 
+textarea {
+  resize: vertical;
+}
+
 button {
+  width: 100%;
+  padding: 10px;
   background-color: #1d4ed8;
   color: white;
-  padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
 }
 
 button:hover {
-  background-color: #163da1;
+  background-color: #1338a3;
 }
