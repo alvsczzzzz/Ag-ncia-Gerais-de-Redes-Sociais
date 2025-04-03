@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Gerais - Quem Somos</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* 🔥 Efeito escuro no banner */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: url('assets/equipe_ficticia.jpg') center/cover no-repeat;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Camada escura */
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        /* 🔥 Cartões da equipe */
+        .team-card {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.2));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- ✅ Cabeçalho fixo -->
+    <header class="fixed w-full bg-gray-800 bg-opacity-90 shadow-md py-4 z-50 top-0 left-0">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
+            <nav>
+                <a href="index.html" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
+                <a href="servicos.html" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
+                <a href="index.html#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
+                <a href="sobre.html" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Banner com efeito escuro -->
+    <section class="banner">
+        <div class="banner-text">
+            <h2 class="text-4xl font-bold">Quem Somos</h2>
+            <p class="text-gray-300 text-lg mt-2">A força por trás do crescimento digital.</p>
+        </div>
+    </section>
+
+    <!-- ✅ História da Agência -->
+    <section class="container mx-auto px-6 text-center my-16">
+        <h3 class="text-3xl font-semibold mb-4">A História da Agência Gerais</h3>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            A Agência Gerais nasceu da paixão por inovação digital. Fundada por especialistas em marketing, tecnologia e design, nosso time se uniu com um único propósito: **fazer marcas crescerem online de maneira inteligente e impactante**.
+        </p>
+    </section>
+
+    <!-- ✅ Missão, Visão e Valores -->
+    <section class="container mx-auto px-6 text-center my-16 grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold mb-3 text-blue-400">Nossa Missão</h4>
+            <p class="text-gray-300">Criar estratégias que conectem marcas ao público certo de forma autêntica.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold mb-3 text-green-400">Nossa Visão</h4>
+            <p class="text-gray-300">Ser referência em crescimento digital e inovação.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-bold mb-3 text-yellow-400">Nossos Valores</h4>
+            <p class="text-gray-300">Criatividade, transparência e resultados concretos.</p>
+        </div>
+    </section>
+
+    <!-- ✅ Seção da Equipe -->
+    <section class="container mx-auto px-6 text-center my-16">
+        <h3 class="text-3xl font-semibold mb-6">Nossa Equipe</h3>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-6">
+            Nosso time é formado por especialistas apaixonados por marketing digital. Cada membro desempenha um papel fundamental para transformar estratégias em resultados.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="team-card p-6 rounded-lg shadow-lg text-center">
+                <img src="assets/equipe1.jpg" alt="Lucas Andrade" class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-blue-400">
+                <h4 class="text-xl font-bold">Lucas Andrade</h4>
+                <p class="text-gray-400">CEO & Estrategista Digital</p>
+                <p class="text-gray-300 text-sm mt-3">
+                    Responsável por traçar direções estratégicas e impulsionar marcas para o sucesso.
+                </p>
+            </div>
+            <div class="team-card p-6 rounded-lg shadow-lg text-center">
+                <img src="assets/equipe2.jpg" alt="Ana Souza" class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-green-400">
+                <h4 class="text-xl font-bold">Ana Souza</h4>
+                <p class="text-gray-400">Gestora de Mídias Sociais</p>
+                <p class="text-gray-300 text-sm mt-3">
+                    Planeja, cria e gerencia conteúdo para aumentar o engajamento e alcance dos clientes.
+                </p>
+            </div>
+            <div class="team-card p-6 rounded-lg shadow-lg text-center">
+                <img src="assets/equipe3.jpg" alt="Carlos Lima" class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-yellow-400">
+                <h4 class="text-xl font-bold">Carlos Lima</h4>
+                <p class="text-gray-400">Especialista em Tráfego Pago</p>
+                <p class="text-gray-300 text-sm mt-3">
+                    Otimiza campanhas de anúncios para gerar leads e aumentar conversões.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Rodapé -->
+    <footer class="bg-gray-800 py-6 text-center">
+        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

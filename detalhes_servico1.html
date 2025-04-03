@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Redes Sociais - Agência Gerais</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animações ao rolar a página) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- ✅ Cabeçalho Fixo -->
+    <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
+            <nav>
+                <a href="index.html" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
+                <a href="servicos.html" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
+                <a href="index.html#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
+                <a href="sobre.html" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Seção Principal -->
+    <section class="container mx-auto my-32 px-6 text-center pt-20">
+        <h2 class="text-4xl font-bold mb-6 text-blue-400" data-aos="fade-up">Gestão de Redes Sociais</h2>
+        
+        <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+            Transforme sua marca em um verdadeiro **ícone digital**! Nossa equipe especializada cria e gerencia conteúdos estratégicos para atrair seguidores, gerar engajamento e aumentar suas vendas.
+        </p>
+
+        <img src="assets/gestao_fluxograma.png" alt="Fluxograma de Gestão de Redes" class="mx-auto mb-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+
+        <h3 class="text-2xl font-semibold mb-4 text-blue-300" data-aos="fade-up">Como funciona?</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="text-xl font-bold mb-2 text-white">📊 Análise de Público</h4>
+                <p class="text-gray-300">Estudamos seu nicho e seus concorrentes para entender **o que funciona e o que atrai clientes**.</p>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                <h4 class="text-xl font-bold mb-2 text-white">📅 Planejamento de Conteúdo</h4>
+                <p class="text-gray-300">Criamos postagens **estratégicas** para engajamento, vendas e crescimento orgânico.</p>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                <h4 class="text-xl font-bold mb-2 text-white">📈 Análise e Crescimento</h4>
+                <p class="text-gray-300">Monitoramos resultados **em tempo real** para **ajustar estratégias e potencializar o sucesso**.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Seção de Prova Social -->
+    <section class="bg-gray-800 py-12 mt-12 text-center">
+        <h3 class="text-2xl font-semibold text-blue-300" data-aos="fade-up">💡 Exemplo Real de Crescimento</h3>
+        
+        <p class="text-gray-300 max-w-2xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="100">
+            A Mania de Biju aumentou seu engajamento em 300% e suas vendas em 150% em apenas 2 meses com nossa gestão estratégica. Veja a diferença:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="text-lg font-bold text-white">🔴 Antes</h4>
+                <img src="assets/gestao_antes.png" alt="Antes da Gestão" class="mx-auto rounded-lg shadow-lg">
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="text-lg font-bold text-white">🟢 Depois</h4>
+                <img src="assets/gestao_depois.png" alt="Depois da Gestão" class="mx-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Chamada para Ação -->
+    <section class="text-center py-12">
+        <h3 class="text-3xl font-semibold mb-4 text-blue-300" data-aos="fade-up">🔥 Pronto para crescer?</h3>
+        <p class="text-lg text-gray-300 max-w-xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="100">
+            Invista no seu sucesso digital agora! Garantimos **aumento de engajamento, crescimento e mais conversões** para o seu negócio.
+        </p>
+
+        <a href="orçamento.html">
+            <button class="mt-auto px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg transition">
+                Fale Conosco
+            </button>
+        </a>
+    </section>
+
+    <!-- ✅ Rodapé -->
+    <footer class="bg-gray-800 py-6 text-center">
+        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ✅ Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Velocidade das animações
+            easing: "ease-in-out",
+            once: true // Só anima uma vez
+        });
+    </script>
+
+</body>
+</html>

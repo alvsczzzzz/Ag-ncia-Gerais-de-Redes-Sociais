@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tráfego Pago - Agência Gerais</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animações ao rolar a página) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <style>
+        .highlight {
+            color: #10b981; /* Verde */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- ✅ Cabeçalho fixo -->
+    <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
+            <nav>
+                <a href="index.html" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
+                <a href="servicos.html" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
+                <a href="index.html#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
+                <a href="sobre.html" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Banner Principal -->
+    <section class="container mx-auto my-32 px-6 text-center pt-20">
+        <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Tráfego Pago: Potencialize suas Vendas 🚀</h2>
+        <p class="text-gray-300 text-lg" data-aos="fade-up" data-aos-delay="100">
+            Alcance mais clientes e aumente suas conversões com anúncios estratégicos no <span class="highlight">Facebook, Instagram e Google Ads</span>.
+        </p>
+    </section>
+
+    <!-- ✅ Explicação do Serviço -->
+    <section class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <img src="assets/trafegopagoimagem.png" alt="Tráfego Pago" class="rounded-lg shadow-lg" data-aos="fade-right">
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-semibold mb-4">O que é Tráfego Pago?</h3>
+                <p class="text-gray-300 mb-4">
+                    Tráfego pago é o investimento em anúncios para atrair visitantes qualificados para o seu negócio. 
+                    Diferente do tráfego orgânico, ele permite alcançar um público muito mais segmentado, aumentando 
+                    as chances de conversão.
+                </p>
+                <p class="text-gray-300">
+                    Com nossa gestão de tráfego pago, sua marca aparecerá para as <span class="highlight">pessoas certas</span>, 
+                    no momento certo, garantindo um <span class="highlight">ROI (Retorno Sobre Investimento)</span> positivo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Gráfico Antes e Depois -->
+    <section class="container mx-auto px-6 my-16">
+        <h3 class="text-2xl font-semibold text-center mb-6" data-aos="fade-up">Resultados Reais: Antes e Depois</h3>
+        <div class="flex justify-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/trafego_antes_depois.png" alt="Antes e Depois do Tráfego Pago" class="rounded-lg shadow-lg">
+        </div>
+        <p class="text-gray-300 text-center mt-4">
+            A empresa <span class="highlight">Mania de Biju</span> viu um crescimento de <span class="highlight">+300% no engajamento</span> 
+            e <span class="highlight">+150% nas vendas</span> após investir em tráfego pago.
+        </p>
+    </section>
+
+    <!-- ✅ Chamada para Ação -->
+    <section class="container mx-auto px-6 my-12 text-center">
+        <h3 class="text-2xl font-semibold mb-4">Quer ver seu negócio crescer assim? 🔥</h3>
+        <p class="text-gray-300 mb-6">Entre em contato agora e descubra como podemos impulsionar suas vendas!</p>
+        <a href="orçamento.html">
+            <button class="mt-auto px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg transition">
+                Fale Conosco
+            </button>
+        </a>
+    </section>
+
+    <!-- ✅ Rodapé -->
+    <footer class="bg-gray-800 py-6 text-center">
+        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ✅ Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: true
+        });
+    </script>
+</body>
+</html>

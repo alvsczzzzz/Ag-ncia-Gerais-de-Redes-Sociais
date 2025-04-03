@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Conteúdo - Agência Gerais</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animações ao rolar a página) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <style>
+        .highlight {
+            color: #f59e0b; /* Amarelo */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- ✅ Cabeçalho fixo -->
+    <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
+            <nav>
+                <a href="index.html" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
+                <a href="servicos.html" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
+                <a href="index.html#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
+                <a href="sobre.html" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Banner Principal -->
+    <section class="container mx-auto my-32 px-6 text-center pt-20">
+        <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Criação de Conteúdo que Converte! 🎨✨</h2>
+        <p class="text-gray-300 text-lg" data-aos="fade-up" data-aos-delay="100">
+            Produzimos conteúdos <span class="highlight">criativos e estratégicos</span> para aumentar o engajamento e presença digital do seu negócio.
+        </p>
+    </section>
+
+    <!-- ✅ Explicação do Serviço -->
+    <section class="container mx-auto px-6 my-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <img src="assets/conteudoimagem.png" alt="Criação de Conteúdo" class="rounded-lg shadow-lg w-full md:h-64 object-cover" data-aos="fade-right">
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-semibold mb-4">Por que investir em Conteúdo?</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li><span class="highlight">Atraia novos clientes</span> com conteúdos envolventes.</li>
+                    <li>Construa uma <span class="highlight">identidade forte</span> para sua marca.</li>
+                    <li>Criação de <span class="highlight">postagens profissionais</span> para redes sociais.</li>
+                    <li><span class="highlight">Artes visuais, vídeos e textos</span> alinhados à sua estratégia.</li>
+                    <li>Impulsione seu engajamento de forma natural e eficiente.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Exemplos de Conteúdo -->
+    <section class="container mx-auto px-6 my-12">
+        <h3 class="text-2xl font-semibold text-center mb-6" data-aos="fade-up">Exemplos de Conteúdos que Criamos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center">
+                <img src="assets/conteudo_postagem.png" alt="Postagem Criativa" class="rounded-lg h-80 mx-auto">
+                <p class="text-gray-300 mt-2">Postagens envolventes para seu Instagram.</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center">
+                <img src="assets/conteudo_edicao.png" alt="Edição de Vídeo" class="rounded-lg h-80 mx-auto">
+                <p class="text-gray-300 mt-2">Edição profissional para vídeos curtos.</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center">
+                <img src="assets/conteudo_design.png" alt="Design Profissional" class="rounded-lg h-80 mx-auto">
+                <p class="text-gray-300 mt-2">Artes visuais que reforçam sua identidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Chamada para Ação -->
+    <section class="container mx-auto px-6 my-12 text-center">
+        <h3 class="text-2xl font-semibold mb-4">Quer transformar sua marca com conteúdo de qualidade? 🔥</h3>
+        <p class="text-gray-300 mb-6">Fale com a nossa equipe e comece a se destacar agora mesmo!</p>
+        <a href="orçamento.html">
+            <button class="mt-auto px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg transition">
+                Fale Conosco
+            </button>
+        </a>
+    </section>
+
+    <!-- ✅ Rodapé -->
+    <footer class="bg-gray-800 py-6 text-center">
+        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ✅ Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: true
+        });
+    </script>
+</body>
+</html>
