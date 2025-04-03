@@ -1,48 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orçamento - Agência Gerais</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="firebase-config.js"></script>
+    <script defer src="orcamento.js"></script>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
-        <h2 class="text-2xl font-bold mb-4 text-center">Solicitar Orçamento</h2>
+<body>
+
+    <header>
+        <h1>Solicite seu Orçamento</h1>
+    </header>
+
+    <main>
         <form id="orcamentoForm">
-            <label class="block mb-2">Nome:</label>
-            <input type="text" id="nome" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
-            
-            <label class="block mb-2">E-mail:</label>
-            <input type="email" id="email" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
-            
-            <label class="block mb-2">Serviço Desejado:</label>
-            <select id="servico" class="w-full p-2 mb-4 rounded bg-gray-700 text-white">
-                <option>Gestão de Redes Sociais</option>
-                <option>Tráfego Pago</option>
-                <option>Criação de Conteúdo</option>
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="marca">Nome da Marca:</label>
+            <input type="text" id="marca" required>
+
+            <label for="tamanho">Tamanho do Projeto:</label>
+            <select id="tamanho">
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
             </select>
-            
-            <label class="block mb-2">Mensagem:</label>
-            <textarea id="mensagem" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required></textarea>
-            
-            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 p-2 rounded-lg">
-                Enviar e Abrir Chat
-            </button>
+
+            <label for="detalhes">Detalhes do Projeto:</label>
+            <textarea id="detalhes" rows="4" required></textarea>
+
+            <button type="submit">Enviar e Iniciar Chat</button>
         </form>
-    </div>
+    </main>
 
     <script>
-        document.getElementById('orcamentoForm').addEventListener('submit', function(event) {
+        document.getElementById("orcamentoForm").addEventListener("submit", function(event) {
             event.preventDefault();
-            let nome = document.getElementById('nome').value;
-            let email = document.getElementById('email').value;
-            let servico = document.getElementById('servico').value;
-            let mensagem = document.getElementById('mensagem').value;
-            
-            let queryString = `?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&servico=${encodeURIComponent(servico)}&mensagem=${encodeURIComponent(mensagem)}`;
-            window.location.href = "chat.html" + queryString;
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const marca = document.getElementById("marca").value;
+            const tamanho = document.getElementById("tamanho").value;
+            const detalhes = document.getElementById("detalhes").value;
+
+            const formData = {
+                nome,
+                email,
+                marca,
+                tamanho,
+                detalhes,
+                timestamp: new Date().toISOString()
+            };
+
+            localStorage.setItem("orcamentoData", JSON.stringify(formData));
+
+            window.location.href = "chat.html";
         });
     </script>
+
 </body>
 </html>
