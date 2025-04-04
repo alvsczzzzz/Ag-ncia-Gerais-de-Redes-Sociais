@@ -6,75 +6,96 @@
     <title>Solicitar Orçamento - Agência Gerais</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
-        <h2 class="text-2xl font-bold mb-4 text-center">Solicitar Orçamento</h2>
-        <form id="orcamentoForm">
-            <label class="block mb-2">Nome Completo:</label>
-            <input type="text" id="nome" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
-            
-            <label class="block mb-2">E-mail:</label>
-            <input type="email" id="email" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
-            
-            <label class="block mb-2">Nome da Empresa:</label>
-            <input type="text" id="empresa" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
-            
-            <label class="block mb-2">WhatsApp da Empresa:</label>
-            <input type="text" id="whatsapp" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" placeholder="(XX) XXXXX-XXXX" required>
-            
-            <label class="block mb-2">Serviço Desejado:</label>
-            <select id="servico" class="w-full p-2 mb-4 rounded bg-gray-700 text-white">
-                <option value="Gestão de Redes Sociais">Gestão de Redes Sociais</option>
-                <option value="Tráfego Pago">Tráfego Pago</option>
-                <option value="Criação de Conteúdo">Criação de Conteúdo</option>
-                <option value="Identidade Visual">Identidade Visual</option>
-                <option value="Outro">Outro</option>
-            </select>
+<body class="bg-gray-900 text-white">
 
-            <label class="block mb-2">Orçamento Disponível:</label>
-            <select id="orcamento" class="w-full p-2 mb-4 rounded bg-gray-700 text-white">
-                <option value="R$500 - R$1.000">R$500 - R$1.000</option>
-                <option value="R$1.000 - R$3.000">R$1.000 - R$3.000</option>
-                <option value="R$3.000 - R$5.000">R$3.000 - R$5.000</option>
-                <option value="Mais de R$5.000">Mais de R$5.000</option>
-            </select>
-            
-            <label class="block mb-2">Detalhes do Projeto:</label>
-            <textarea id="mensagem" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required></textarea>
-            
-            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 p-2 rounded-lg">
-                Enviar Orçamento via WhatsApp
-            </button>
-        </form>
-    </div>
+    <!-- ✅ Cabeçalho fixo -->
+    <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
+            <nav>
+                <a href="index.html" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
+                <a href="servicos.html" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
+                <a href="index.html#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
+                <a href="sobre.html" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+            </nav>
+        </div>
+    </header>
 
+    <!-- ✅ Formulário de Orçamento -->
+    <section class="flex items-center justify-center min-h-screen px-6 pt-20">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
+            <h2 class="text-2xl font-bold mb-4 text-center">Solicitar Orçamento</h2>
+            <form id="orcamentoForm">
+                <label class="block mb-2">Nome:</label>
+                <input type="text" id="nome" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
+                
+                <label class="block mb-2">E-mail:</label>
+                <input type="email" id="email" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
+
+                <label class="block mb-2">Telefone (WhatsApp):</label>
+                <input type="tel" id="telefone" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
+
+                <label class="block mb-2">Nome da Empresa/Marca:</label>
+                <input type="text" id="empresa" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required>
+
+                <label class="block mb-2">Serviço Desejado:</label>
+                <select id="servico" class="w-full p-2 mb-4 rounded bg-gray-700 text-white">
+                    <option>Gestão de Redes Sociais</option>
+                    <option>Tráfego Pago</option>
+                    <option>Criação de Conteúdo</option>
+                </select>
+
+                <label class="block mb-2">Orçamento disponível:</label>
+                <select id="orcamento" class="w-full p-2 mb-4 rounded bg-gray-700 text-white">
+                    <option>Até R$ 500</option>
+                    <option>R$ 500 - R$ 1.000</option>
+                    <option>R$ 1.000 - R$ 3.000</option>
+                    <option>Acima de R$ 3.000</option>
+                </select>
+                
+                <label class="block mb-2">Detalhes do Projeto:</label>
+                <textarea id="mensagem" class="w-full p-2 mb-4 rounded bg-gray-700 text-white" required></textarea>
+
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 p-2 rounded-lg">
+                    Enviar e Abrir Chat
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ✅ Rodapé -->
+    <footer class="bg-gray-800 py-6 text-center">
+        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ✅ Script para WhatsApp -->
     <script>
         document.getElementById('orcamentoForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            
+
             let nome = document.getElementById('nome').value;
             let email = document.getElementById('email').value;
+            let telefone = document.getElementById('telefone').value;
             let empresa = document.getElementById('empresa').value;
-            let whatsapp = document.getElementById('whatsapp').value;
             let servico = document.getElementById('servico').value;
             let orcamento = document.getElementById('orcamento').value;
             let mensagem = document.getElementById('mensagem').value;
 
-            let mensagemFormatada = `*Solicitação de Orçamento*%0A%0A` +
-                `🔹 *Nome:* ${nome}%0A` +
-                `🔹 *E-mail:* ${email}%0A` +
-                `🔹 *Empresa:* ${empresa}%0A` +
-                `🔹 *WhatsApp:* ${whatsapp}%0A` +
-                `🔹 *Serviço Desejado:* ${servico}%0A` +
-                `🔹 *Orçamento Disponível:* ${orcamento}%0A` +
-                `🔹 *Detalhes do Projeto:* ${mensagem}%0A%0A` +
-                `Aguardo seu retorno!`;
+            let texto = `👋 Olá! Gostaria de solicitar um orçamento:\n\n`
+                      + `🔹 Nome: ${nome}\n`
+                      + `📧 E-mail: ${email}\n`
+                      + `📱 WhatsApp: ${telefone}\n`
+                      + `🏢 Empresa: ${empresa}\n`
+                      + `📌 Serviço: ${servico}\n`
+                      + `💰 Orçamento: ${orcamento}\n`
+                      + `📝 Detalhes: ${mensagem}`;
 
-            let telefoneAtendimento = "5551990132339"; // Substitua pelo número do WhatsApp da empresa
+            let numeroWhatsApp = "5511999999999"; // Substitua pelo número oficial do atendimento
+            let urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(texto)}`;
             
-            let url = `https://wa.me/${telefoneAtendimento}?text=${mensagemFormatada}`;
-            window.open(url, "_blank");
+            window.open(urlWhatsApp, "_blank");
         });
     </script>
+
 </body>
 </html>
