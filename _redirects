@@ -1,6 +1,6 @@
-/ /index.html 200
-/orcamento /orcamento.html 200
-/chat /chat.html 200
-/contato /contato.html 200
-/sobre /sobre.html 200
-/servicos /servicos.html 200
+/detalhes-servico-1  /gestao-redes  301
+/detalhes-servico-2  /trafego-pago  301
+/detalhes-servico-3  /criacao-conteudo  301
+/contato  /#contato  200
+/orcamento  /orcamento.html  200
+/chat  /chat.html  200
