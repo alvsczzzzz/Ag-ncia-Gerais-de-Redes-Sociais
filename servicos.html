@@ -1,112 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agência Gerais - Serviços</title>
-    
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- AOS (Animações ao rolar a página) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência Gerais - Serviços</title>
 
-    <style>
-        /* Efeito de zoom na imagem */
-        .service-image {
-            transition: transform 0.3s ease-in-out;
-        }
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .service-image:hover {
-            transform: scale(1.1);
-        }
+  <!-- AOS (Animações ao rolar a página) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        /* Efeito de foco no serviço */
-        .service-card:hover {
-            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.8);
-        }
-    </style>
+  <style>
+    .service-image {
+      transition: transform 0.3s ease-in-out;
+    }
+    .service-image:hover {
+      transform: scale(1.1);
+    }
+    .service-card:hover {
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.8);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white">
-    
-    <!-- ✅ Cabeçalho fixo -->
-    <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
-            <nav>
-                <a href="/" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
-                <a href="/servicos" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
-                <a href="/contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
-                <a href="/sobre" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Cabeçalho -->
+  <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
+      <nav>
+        <a href="/" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
+        <a href="/servicos" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
+        <a href="/contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
+        <a href="/sobre" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- ✅ Seção de Serviços -->
-    <section class="container mx-auto my-32 px-6 text-center pt-20">
-        <h3 class="text-3xl font-semibold mb-6" data-aos="fade-up">Nossos Serviços</h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Gestão de Redes Sociais -->
-            <div class="service-card bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-                <a href="/gestao-redes">
-                    <img src="assets/gestaoimagem.png" alt="Gestão de Redes Sociais" class="service-image w-full h-40 object-cover rounded-t-lg mb-4">
-                </a>
-                <h4 class="text-xl font-bold mb-3">Gestão de Redes Sociais</h4>
-                <p class="text-gray-300 mb-4">Transforme sua presença online com estratégias de conteúdo direcionadas ao seu público.</p>
-                <p class="text-xl font-bold mb-4">Valorize seu Tempo e Esforço</p>
-                <a href="/gestao-redes">
-                    <button class="mt-auto px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition">
-                        Saiba Mais
-                    </button>
-                </a>
-            </div>
-            
-            <!-- Tráfego Pago -->
-            <div class="service-card bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                <a href="/trafego-pago">
-                    <img src="assets/trafegopagoimagem.png" alt="Tráfego Pago" class="service-image w-full h-40 object-cover rounded-t-lg mb-4">
-                </a>
-                <h4 class="text-xl font-bold mb-3">Tráfego Pago</h4>
-                <p class="text-gray-300 mb-4">Aumente suas conversões com campanhas no Facebook, Instagram e Google Ads.</p>
-                <p class="text-xl font-bold mb-4">Maior Alcançe e Conversões</p>
-                <a href="/trafego-pago">
-                    <button class="mt-auto px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition">
-                        Saiba Mais
-                    </button>
-                </a>
-            </div>
-            
-            <!-- Criação de Conteúdo -->
-            <div class="service-card bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
-                <a href="/criacao-conteudo">
-                    <img src="assets/conteudoimagem.png" alt="Criação de Conteúdo" class="service-image w-full h-40 object-cover rounded-t-lg mb-4">
-                </a>
-                <h4 class="text-xl font-bold mb-3">Criação de Conteúdo</h4>
-                <p class="text-gray-300 mb-4">De postagens criativas a vídeos e designs exclusivos, garantimos que sua marca se destaque.</p>
-                <p class="text-xl font-bold mb-4">Qualidade e Criatividade</p>
-                <a href="/criacao-conteudo">
-                    <button class="mt-auto px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition">
-                        Saiba Mais
-                    </button>
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- Espaço para cabeçalho fixo -->
+  <div class="h-20"></div>
 
-    <!-- ✅ Rodapé -->
-    <footer class="bg-gray-800 py-6 text-center">
-        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
-    </footer>
+  <!-- Seção de Serviços -->
+  <section class="container mx-auto my-32 px-6 text-center">
+    <h3 class="text-3xl font-semibold mb-6" data-aos="fade-up">Nossos Serviços</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Gestão de Redes Sociais -->
+      <div class="service-card bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+        <a href="/gestao-redes">
+          <img src="assets/gestaoimagem.png" alt="Gestão de Redes Sociais" class="service-image w-full h-40 object-cover rounded-t-lg mb-4">
+        </a>
+        <h4 class="text-xl font-bold mb-3">Gestão de Redes Sociais</h4>
+        <p class="text-gray-300 mb-4">Transforme sua presença online com estratégias de conteúdo direcionadas ao seu público.</p>
+        <p class="text-xl font-bold mb-4">Valorize seu Tempo e Esforço</p>
+        <a href="/gestao-redes">
+          <button class="mt-auto px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition">Saiba Mais</button>
+        </a>
+      </div>
+      <!-- Tráfego Pago -->
+      <div class="service-card bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+        <a href="/trafego-pago">
+          <img src="assets/trafegopagoimagem.png" alt="Tráfego Pago" class="service-image w-full h-40 object-cover rounded-t-lg mb-4">
+        </a>
+        <h4 class="text-xl font-bold mb-3">Tráfego Pago</h4>
+        <p class="text-gray-300 mb-4">Aumente suas conversões com campanhas no Facebook, Instagram e Google Ads.</p>
+        <p class="text-xl font-bold mb-4">Maior Alcance e Conversões</p>
+        <a href="/trafego-pago">
+          <button class="mt-auto px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition">Saiba Mais</button>
+        </a>
+      </div>
+      <!-- Criação de Conteúdo -->
+      <div class="service-card bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+        <a href="/criacao-conteudo">
+          <img src="assets/conteudoimagem.png" alt="Criação de Conteúdo" class="service-image w-full h-40 object-cover rounded-t-lg mb-4">
+        </a>
+        <h4 class="text-xl font-bold mb-3">Criação de Conteúdo</h4>
+        <p class="text-gray-300 mb-4">De postagens criativas a vídeos e designs exclusivos, garantimos que sua marca se destaque.</p>
+        <p class="text-xl font-bold mb-4">Qualidade e Criatividade</p>
+        <a href="/criacao-conteudo">
+          <button class="mt-auto px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition">Saiba Mais</button>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- ✅ Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800, // Velocidade das animações
-            easing: "ease-in-out",
-            once: true // Só anima uma vez
-        });
-    </script>
+  <!-- Seção de Engajamento Direto -->
+  <section class="container mx-auto px-6 py-16 text-center">
+    <h3 class="text-3xl font-semibold mb-6" data-aos="fade-up">Pacotes Rápidos de Engajamento</h3>
+    <p class="text-gray-400 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Escolha um pacote e receba curtidas, seguidores, compartilhamentos e mais ao longo das postagens feitas pela nossa agência — 100% orgânico!
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Pacote Start -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+        <h4 class="text-xl font-bold mb-2">Pacote Star⭐</h4>
+        <p class="text-gray-300 mb-2">+500 seguidores + 1.000 curtidas</p>
+        <p class="text-green-400 font-bold mb-2">R$ 29,90 <span class="line-through text-gray-500 text-sm ml-2">R$ 40,00</span></p>
+        <p class="text-sm text-gray-400 mb-4">Entrega gradual em até 7 dias em postagens promovidas.</p>
+        <a href="https://wa.me/5551990132339?text=Olá%2C%20quero%20o%20Pacote%20Start%20de%20Engajamento">
+          <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">Quero esse</button>
+        </a>
+      </div>
+
+      <!-- Pacote Pro -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+        <h4 class="text-xl font-bold mb-2">Pacote Pro</h4>
+        <p class="text-gray-300 mb-2">+1.000 seguidores + 2.000 curtidas + 100 compartilhamentos</p>
+        <p class="text-green-400 font-bold mb-2">R$ 44,90 <span class="line-through text-gray-500 text-sm ml-2">R$ 65,00</span></p>
+        <p class="text-sm text-gray-400 mb-4">Resultados consistentes em até 10 dias úteis.</p>
+        <a href="https://wa.me/5551990132339?text=Olá%2C%20quero%20o%20Pacote%20Pro%20de%20Engajamento">
+          <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">Quero esse</button>
+        </a>
+      </div>
+
+      <!-- Pacote Turbo -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+        <h4 class="text-xl font-bold mb-2">Pacote Turbo</h4>
+        <p class="text-gray-300 mb-2">+2.000 seguidores + 4.000 curtidas + 300 compartilhamentos</p>
+        <p class="text-green-400 font-bold mb-2">R$ 74,90 <span class="line-through text-gray-500 text-sm ml-2">R$ 110,00</span></p>
+        <p class="text-sm text-gray-400 mb-4">Alta performance em 15 dias de postagens orgânicas.</p>
+        <a href="https://wa.me/5551990132339?text=Olá%2C%20quero%20o%20Pacote%20Turbo%20de%20Engajamento">
+          <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">Quero esse</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+      <!-- Pacote Viral -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+        <h4 class="text-xl font-bold mb-2">Pacote Viral</h4>
+        <p class="text-gray-300 mb-2">+5.000 seguidores + 10.000 curtidas + 700 compartilhamentos</p>
+        <p class="text-green-400 font-bold mb-2">R$ 149,90 <span class="line-through text-gray-500 text-sm ml-2">R$ 210,00</span></p>
+        <p class="text-sm text-gray-400 mb-4">Perfeito para viralizar posts em 20 dias úteis.</p>
+        <a href="https://wa.me/5551990132339?text=Olá%2C%20quero%20o%20Pacote%20Viral%20de%20Engajamento">
+          <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">Quero esse</button>
+        </a>
+      </div>
+
+      <!-- Pacote Influencer -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+        <h4 class="text-xl font-bold mb-2">Pacote Influencer</h4>
+        <p class="text-gray-300 mb-2">+10.000 seguidores + 20.000 curtidas + 1.000 compartilhamentos</p>
+        <p class="text-green-400 font-bold mb-2">R$ 279,90 <span class="line-through text-gray-500 text-sm ml-2">R$ 340,00</span></p>
+        <p class="text-sm text-gray-400 mb-4">Impulsione sua autoridade em 30 dias de postagens.</p>
+        <a href="https://wa.me/5551990132339?text=Olá%2C%20quero%20o%20Pacote%20Influencer%20de%20Engajamento">
+          <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">Quero esse</button>
+        </a>
+      </div>
+
+      <!-- Pacote Elite -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+        <h4 class="text-xl font-bold mb-2">Pacote Elite</h4>
+        <p class="text-gray-300 mb-2">+20.000 seguidores + 50.000 curtidas + 2.500 compartilhamentos</p>
+        <p class="text-green-400 font-bold mb-2">R$ 530,90 <span class="line-through text-gray-500 text-sm ml-2">R$ 700,00</span></p>
+        <p class="text-sm text-gray-400 mb-4">Resultados de alto impacto em 45 dias de campanha orgânica.</p>
+        <a href="https://wa.me/5551990132339?text=Olá%2C%20quero%20o%20Pacote%20Elite%20de%20Engajamento">
+          <button class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">Quero esse</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+  </script>
 </body>
 </html>
