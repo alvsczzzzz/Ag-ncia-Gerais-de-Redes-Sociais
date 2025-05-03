@@ -8,18 +8,41 @@
 </head>
 <body class="bg-gray-900 text-white">
 
-    <!-- ✅ Cabeçalho fixo -->
-    <header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
-            <nav>
-                <a href="index.html" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
-                <a href="servicos.html" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
-                <a href="index.html#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
-                <a href="sobre.html" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Cabeçalho IDÊNTICO ao da página inicial -->
+<header class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md py-4 z-50 top-0 left-0">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center">
+        <!-- Ícone + Nome (EXATAMENTE igual ao original) -->
+        <img src="assets/iconagencia.png" alt="Ícone da Agência" class="w-14 h-12 rounded-full mr-3">
+        <h1 class="text-xl font-bold text-purple-600">Agência</h1>
+        <h1 class="text-xl font-bold text-white">Gerais</h1>
+      </div>
+      
+      <!-- Menu de navegação COM ÍCONES -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="/" class="flex items-center text-white hover:text-purple-400 transition">
+          <i class="fas fa-home mr-2"></i> Início
+        </a>
+        <a href="/pacotes" class="flex items-center text-white hover:text-purple-400 transition">
+          <i class="fas fa-box-open mr-2"></i> Pacotes
+        </a>
+        <a href="/sobre" class="flex items-center text-white hover:text-purple-400 transition">
+          <i class="fas fa-users mr-2"></i> Quem somos
+        </a>
+      </nav>
+      
+      <!-- Botão mobile (aparece só em telas pequenas) -->
+      <button class="md:hidden text-white text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Espaço para o cabeçalho fixo -->
+  <div class="h-20"></div>
+  
+  <!-- OBRIGATÓRIO: Adicione isso no <head> das páginas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- ✅ Formulário de Orçamento -->
     <section class="flex items-center justify-center min-h-screen px-6 pt-20">
@@ -63,9 +86,78 @@
         </div>
     </section>
 
-    <!-- ✅ Rodapé -->
-    <footer class="bg-gray-800 py-6 text-center">
-        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    <!-- Rodapé Premium -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="assets/iconagencia.png" alt="Ícone da Agência" class="w-10 h-10 rounded-full mr-3">
+                        <h3 class="text-xl font-bold text-white">Agência Gerais</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Transformando presenças digitais desde 2020 com estratégias inovadoras e resultados comprovados.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Início
+                        </a></li>
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Pacotes
+                        </a></li>
+                        <li><a href="/sobre" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Quem Somos
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Gestão de Redes
+                        </a></li>
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Tráfego Pago
+                        </a></li>
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Criação de Conteúdo
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/agenciageraisoficial" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-pink-500/10 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Ag%C3%AAncia-Gerais-de-Redes-Sociais/61574773929243/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-blue-500 hover:bg-blue-500/10 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-gray-100 transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/5551990132339" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-green-500 hover:bg-green-500/10 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mailto:agenciagerais@outlook.com" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary"></i> agenciagerais@outlook.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2025 Agência Gerais. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- ✅ Script para WhatsApp -->

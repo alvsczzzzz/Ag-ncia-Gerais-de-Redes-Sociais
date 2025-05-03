@@ -7,120 +7,338 @@
     
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8B5CF6',
+              secondary: '#7C3AED',
+              dark: '#1F2937',
+              darker: '#111827'
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- AOS (Animações ao rolar a página) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* 🔥 Efeito escuro no banner */
-        .banner {
+        .hero-about {
+            background: linear-gradient(rgba(139, 92, 246, 0.85), rgba(124, 58, 237, 0.9)), 
+                        url('assets/equipe_ficticia.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
             position: relative;
-            width: 100%;
-            height: 400px;
-            background: url('assets/equipe_ficticia.jpg') center/cover no-repeat;
         }
 
-        .banner::before {
-            content: "";
+        .team-card {
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            border-top-color: #8B5CF6;
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
+        }
+
+        .value-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-item::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Camada escura */
-        }
-
-        .banner-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-        }
-
-        /* 🔥 Cartões da equipe */
-        .team-card {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.2));
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.2));
+            z-index: -1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-darker text-gray-100">
     
-    <!-- ✅ Cabeçalho fixo -->
-    <header class="fixed w-full bg-gray-800 bg-opacity-90 shadow-md py-4 z-50 top-0 left-0">
+    <!-- Cabeçalho Premium -->
+    <header class="fixed w-full bg-gray-900/90 backdrop-blur-md shadow-lg py-3 z-50 top-0 left-0">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-xl font-bold text-white">Agência Gerais</h1>
-            <nav>
-                <a href="/index" class="mx-4 hover:text-blue-400 transition text-white">Início</a>
-                <a href="/servicos" class="mx-4 hover:text-blue-400 transition text-white">Serviços</a>
-                <a href="/index#contato" class="mx-4 hover:text-blue-400 transition text-white">Contato</a>
-                <a href="/sobre" class="mx-4 hover:text-blue-400 transition text-white">Quem somos</a>
+            <div class="flex items-center">
+                <img src="assets/iconagencia.png" alt="Ícone da Agência" class="w-12 h-12 rounded-full mr-3 border-2 border-primary">
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Agência Gerais</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-white hover:text-primary transition-all font-medium flex items-center">
+                    <i class="fas fa-home mr-2"></i> Início
+                </a>
+                <a href="/pacotes" class="text-white hover:text-primary transition-all font-medium flex items-center">
+                    <i class="fas fa-box-open mr-2"></i> Pacotes
+                </a>
+                <a href="/sobre" class="text-white hover:text-primary transition-all font-medium flex items-center">
+                    <i class="fas fa-users mr-2"></i> Quem somos
+                </a>
+                <a href="#nossa-equipe" class="px-5 py-2 bg-primary text-white rounded-full font-bold hover:bg-secondary transition-all shadow-lg hover:shadow-primary/30">
+                    Nossa Equipe
+                </a>
             </nav>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
     </header>
 
-    <!-- ✅ Banner com efeito escuro -->
-    <section class="banner">
-        <div class="banner-text">
-            <h2 class="text-4xl font-bold">Quem Somos</h2>
-            <p class="text-gray-300 text-lg mt-2">A força por trás do crescimento digital.</p>
+    <!-- Espaço para o cabeçalho fixo -->
+    <div class="h-20"></div>
+
+    <!-- Hero Section Sobre Nós -->
+    <section class="hero-about">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Quem impulsiona sua presença digital</span></h1>
+            <p class="text-xl text-purple-100 max-w-2xl mx-auto">
+                Conheça a equipe por trás dos resultados excepcionais da Agência Gerais
+            </p>
         </div>
     </section>
 
-    <!-- ✅ História da Agência -->
-    <section class="container mx-auto px-6 text-center my-16">
-        <h3 class="text-3xl font-semibold mb-4">A História da Agência Gerais</h3>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-            A Agência Gerais nasceu da paixão por inovação digital. Fundada por especialistas em marketing, tecnologia e design, nosso time se uniu com um único propósito: **fazer marcas crescerem online de maneira inteligente e impactante**.
-        </p>
+    <!-- Nossa História -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Nossa <span class="text-primary">História</span></h2>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        Fundada em 2020, a Agência Gerais surgiu da união de especialistas em marketing digital apaixonados por criar estratégias que realmente funcionam.
+                    </p>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        Começamos pequenos, mas com uma grande ambição: transformar a maneira como as marcas se conectam com seu público nas redes sociais.
+                    </p>
+                    <p class="text-gray-400 text-lg">
+                        Hoje, somos referência em crescimento orgânico e gestão de redes sociais, com mais de 500 clientes satisfeitos em todo o país.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
+                    <div class="bg-gray-800 rounded-xl p-8 border-l-4 border-primary">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Nossa Jornada</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-rocket text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">2020 - Fundação</h4>
+                                    <p class="text-gray-400">Primeiro escritório com 3 colaboradores</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-chart-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">2022 - Expansão</h4>
+                                    <p class="text-gray-400">Atendimento para todo o território nacional</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-trophy text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">2024 - Reconhecimento</h4>
+                                    <p class="text-gray-400">Premiada como melhor agência de growth digital</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- ✅ Missão, Visão e Valores -->
-    <section class="container mx-auto px-6 text-center my-16 grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h4 class="text-xl font-bold mb-3 text-blue-400">Nossa Missão</h4>
-            <p class="text-gray-300">Criar estratégias que conectem marcas ao público certo de forma autêntica.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h4 class="text-xl font-bold mb-3 text-green-400">Nossa Visão</h4>
-            <p class="text-gray-300">Ser referência em crescimento digital e inovação.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h4 class="text-xl font-bold mb-3 text-yellow-400">Nossos Valores</h4>
-            <p class="text-gray-300">Criatividade, transparência e resultados concretos.</p>
+    <!-- Nossa Equipe -->
+    <section id="nossa-equipe" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Conheça <span class="text-primary">Nossa Equipe</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Profissionais especializados em cada área do marketing digital
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="team-card bg-gray-900 p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="CEO" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ana Silva</h3>
+                    <p class="text-primary mb-4">CEO & Fundadora</p>
+                    <p class="text-gray-400">
+                        Especialista em estratégia digital com 10+ anos de experiência em growth marketing.
+                    </p>
+                </div>
+                
+                <div class="team-card bg-gray-900 p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Diretor de Criação" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Carlos Mendes</h3>
+                    <p class="text-primary mb-4">Diretor de Criação</p>
+                    <p class="text-gray-400">
+                        Designer premiado com expertise em branding e conteúdo visual.
+                    </p>
+                </div>
+                
+                <div class="team-card bg-gray-900 p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Gerente de Tráfego" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Juliana Oliveira</h3>
+                    <p class="text-primary mb-4">Gerente de Tráfego</p>
+                    <p class="text-gray-400">
+                        Especialista em campanhas de performance e conversão.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ✅ Seção de Contato -->
-    <section class="container mx-auto px-6 text-center my-16">
-        <h3 class="text-3xl font-semibold mb-6">📞 Entre em Contato</h3>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-6">
-            Quer saber mais? Entre em contato conosco através das nossas redes sociais ou e-mail.
-        </p>
-
-        <div class="flex justify-center gap-6">
-            <a href="https://wa.me/5551990132339" target="_blank" class="bg-green-500 px-6 py-3 rounded-lg text-white font-bold hover:bg-green-600 transition">
-                📲 WhatsApp
-            </a>
-            <a href="https://www.facebook.com/people/Ag%C3%AAncia-Gerais-de-Redes-Sociais/61574773929243/" target="_blank" class="bg-blue-600 px-6 py-3 rounded-lg text-white font-bold hover:bg-blue-700 transition">
-                📘 Facebook
-            </a>
-            <a href="https://www.instagram.com/agenciageraisoficial" target="_blank" class="bg-pink-500 px-6 py-3 rounded-lg text-white font-bold hover:bg-pink-600 transition">
-                📸 Instagram
-            </a>
-            <a href="mailto:agenciagerais@outlook.com" class="bg-gray-700 px-6 py-3 rounded-lg text-white font-bold hover:bg-gray-800 transition">
-                ✉️ E-mail
-            </a>
+    <!-- Valores -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossos <span class="text-primary">Valores</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Princípios que guiam cada decisão e estratégia
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="value-item p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Inovação</h3>
+                    <p class="text-gray-400">
+                        Buscamos constantemente novas formas de conectar marcas e públicos.
+                    </p>
+                </div>
+                
+                <div class="value-item p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Resultados</h3>
+                    <p class="text-gray-400">
+                        Nosso sucesso é medido pelo crescimento dos nossos clientes.
+                    </p>
+                </div>
+                
+                <div class="value-item p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Transparência</h3>
+                    <p class="text-gray-400">
+                        Relacionamentos baseados em honestidade e clareza.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ✅ Rodapé -->
-    <footer class="bg-gray-800 py-6 text-center">
-        <p class="text-gray-400">© 2025 Agência Gerais - Todos os direitos reservados.</p>
+    <!-- Rodapé Premium -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="assets/iconagencia.png" alt="Ícone da Agência" class="w-10 h-10 rounded-full mr-3">
+                        <h3 class="text-xl font-bold text-white">Agência Gerais</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Transformando presenças digitais desde 2020 com estratégias inovadoras e resultados comprovados.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Início
+                        </a></li>
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Pacotes
+                        </a></li>
+                        <li><a href="/sobre" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Quem Somos
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Gestão de Redes
+                        </a></li>
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Tráfego Pago
+                        </a></li>
+                        <li><a href="/pacotes" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i> Criação de Conteúdo
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/agenciageraisoficial" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-pink-500/10 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Ag%C3%AAncia-Gerais-de-Redes-Sociais/61574773929243/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-blue-500 hover:bg-blue-500/10 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-black hover:bg-gray-100 transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/5551990132339" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-green-500 hover:bg-green-500/10 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="mailto:agenciagerais@outlook.com" class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary"></i> agenciagerais@outlook.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2025 Agência Gerais. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: true,
+            offset: 50
+        });
+    </script>
 </body>
 </html>
